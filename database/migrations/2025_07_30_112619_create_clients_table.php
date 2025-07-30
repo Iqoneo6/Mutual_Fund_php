@@ -13,7 +13,23 @@ class CreateClientsTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('clients', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name');
+            $table->string('email')->unique()->nullable();
+            $table->string('password')->nullable(); 
+            $table->string('mobile')->nullable();
+            $table->string('pan_number')->nullable();
+            $table->string('aadhar_number')->nullable();
+            $table->text('profile')->nullable();
+            $table->date('dob')->nullable();
+            $table->text('address')->nullable();
+            $table->string('city')->nullable();
+            $table->string('state')->nullable();
+            $table->string('pincode')->nullable();
+            $table->string('occupation')->nullable();
+            $table->timestamps();
+        });
     }
 
     /**

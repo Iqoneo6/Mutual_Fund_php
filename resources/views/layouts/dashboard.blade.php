@@ -220,6 +220,24 @@
                 </li>-->
                 <li class="has-sub">
                     <a href="#">
+                        <i class="entypo-users"></i>
+                        <span class="title">Clients</span>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="{{ route('clients.index') }}">
+                                <i class="fa fa-list"></i> <span>All Clients</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('clients.create') }}">
+                                <i class="fa fa-plus"></i> <span>Add Client</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="has-sub">
+                    <a href="#">
                         <i class="entypo-tools"></i>
                         <span class="title">Web Control</span>
                     </a>

@@ -66,6 +66,20 @@ Route::post('admin/settings/update', [
 Route::get('basic-setting', ['as'=>'basic-setting', 'uses'=>'BasicSettingController@getBasicSetting']);
 Route::put('basic-general/{id}', ['as'=>'basic-update', 'uses'=>'BasicSettingController@putBasicSetting']);
 
+// client crud
+
+use App\Http\Controllers\ClientController;
+
+Route::get('/clients', 'ClientController@index')->name('clients.index');
+Route::get('/clients/create', 'ClientController@create')->name('clients.create');
+Route::post('/clients', 'ClientController@store')->name('clients.store');
+Route::get('/clients/{id}/edit', 'ClientController@edit')->name('clients.edit');
+
+Route::put('/clients/{id}', 'ClientController@update')->name('clients.update');
+Route::delete('/clients/{id}', 'ClientController@destroy')->name('clients.destroy');
+
+
+
 
 /* News category Route List */
 Route::get('news-category',['as'=>'news-category','uses'=>'DashboardController@getCategory']);

@@ -227,7 +227,7 @@
     <!-- Footer -->
         <footer class="main">
 
-            &copy; @php echo date('Y'); @endphp <strong>All Copyright Reserved.</strong>
+            &copy;Copyright  @php echo date('Y'); @endphp <strong>All  Reserved.</strong>
 
         </footer>
     </div>
