@@ -18,4 +18,3 @@ class Fund extends Model
         'total',
     ];
 }
-//
