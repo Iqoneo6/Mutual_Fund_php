@@ -29,6 +29,7 @@
     </script>
 <div class="container mt-4">
     <h2>All Clients</h2>
+    <a href="{{ route('clients.create') }}" class="btn btn-sm btn-primary float-end">+ Add Client</a>
     @if (session('success'))
         <div class="alert alert-success">{{ session('success') }}</div>
     @endif

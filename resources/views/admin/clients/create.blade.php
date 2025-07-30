@@ -3,8 +3,8 @@
 @section('content')
 <div class="container mt-4">
     <h2>Add New Client</h2>
-    <form action="{{ route('admin.clients.store') }}" method="POST">
-        @csrf
+    <form action="{{ route('clients.store') }}" method="POST">
+        {{ csrf_field() }}
 
         <div class="form-group">
             <label>Name</label>
@@ -18,7 +18,7 @@
 
         <div class="form-group">
             <label>Mobile</label>
-            <input type="text" name="mobile" class="form-control">
+            <input type="text" name="phone" class="form-control">
         </div>
 
         <div class="form-group">

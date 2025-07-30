@@ -43,6 +43,7 @@
                     @endif
                     <form action="{{ route('login') }}" method="post" accept-charset="utf-8" class="block">
                         {!! csrf_field() !!}
+                        <!-- {{ csrf_token() }} -->
 
                         <div class="input-group">
                             <input type="email" name="email" value="{{ old('email') }}" required class="form-control" placeholder="Enter Email Address" aria-describedby="basic-addon3">

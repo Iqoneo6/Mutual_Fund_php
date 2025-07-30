@@ -17,6 +17,12 @@ class ClientController extends Controller
         return view('admin.clients.index', compact('clients', 'site_title'));
     }
 
+    public function create()
+    {
+        $site_title = GeneralSetting::value('title');
+        return view('admin.clients.create', compact('site_title'));
+    }
+
     public function store(Request $request)
     {
         $request->validate([
@@ -33,8 +39,15 @@ class ClientController extends Controller
             'name'       => $request->name,
             'email'      => $request->email,
             'phone'      => $request->phone,
+            'password'   => Hash::make($request->password),
             'ID_Number'  => $request->ID_Number,
+            'aadhar_number' => $request->aadhar_number,
+            'dob'   => $request->dob,
+             'city'          => $request->city,
+            'state'         => $request->state,
             'zip'        => $request->zip,
+            'verifyToken' => Str::random(40),
+            'reference' => Str::random(12),
             'address'    => $request->address,
             'password'   => Hash::make($request->password),
             'status'     => 1, 
